@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Gib mir eine Zahl</h1>
+        <h2>ich werde ALLE Zahlen bis zu dieser Zahl addieren, wenn sie durch die gewählten Zahlen teilbar sind!</h2>
+        <label for="numMax">maximale Zahl</label>
+        <input type="number" name="numMax" id="numMax" value="10" min="0">
+        <label for="cbNum1">Erste Zahl</label>
+        <select name="cbNum1" id="cbNum1"></select>
+        <label for="cbNum2">zweite Zahl</label>
+        <select name="cbNum2" id="cbNum2"></select>
+        <input type="button" value="Count Me" onclick="countMe()">
+        <h3 id="result">&nbsp;</h3>
+    </form>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
