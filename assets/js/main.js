@@ -18,25 +18,18 @@ function countMe() {
     let div1 = Number(selectNum1.value);
     let div2 = Number(selectNum2.value);
 
+    result.style.color = 'red';
     if (num == 0) {
-        result.style.color = 'red';
         result.innerHTML = "Bitte eine Zahl > 0 eingeben!";
-        return;
-    }
-
-    if (div1 == div2) {
-        result.style.color = 'red';
+    } else if (div1 == div2) {
         result.innerHTML = "Die beiden selektierten Zahlen dürfen nicht gleich sein!";
-        return;
+    } else {
+        let sum = 0;
+        for (let i = 0; i < num; i++) {
+            if ((i % div1 == 0) || (i % div2 == 0))
+                sum += i;
+        }
+        result.style.color = 'green';
+        result.innerHTML = `Ergebnis: ${sum}`;
     }
-
-    let sum = 0;
-    for (let i = 0; i < num; i++) {
-        if (i % div1 == 0)
-            sum += i;
-        else if (i % div2 == 0)
-            sum += i;
-    }
-    result.style.color = 'green';
-    result.innerHTML = `Ergebnis: ${sum}`;
 }
